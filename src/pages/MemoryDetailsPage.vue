@@ -18,7 +18,6 @@
 <script lang="ts">
 import MemoryOverview from '../components/memories/MemoryOverview.vue'
 import { defineComponent } from 'vue';
-import { IonImg } from '@ionic/vue';
 
 export default defineComponent({
     name: "MemoryDetails",
@@ -44,11 +43,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style scoped>
-    #content {
-        width:90%;
-        margin: auto;
-        display: block;
-    }
-</style>

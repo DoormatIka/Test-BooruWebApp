@@ -1,10 +1,11 @@
 <template>
-    <base-layout :page-title="memories ? `Loaded.` : `Loading`">
+    <base-layout :page-title="memories ? `BooruApp` : `Loading`">
 
                 <!--
                 <h1 v-if='!memories'>Nothing here yet..</h1>
                 <h1 v-else><b>ilyn's Images</b></h1>
                 -->
+                <br>
 
                 <template v-slot:actions-end>
                     <ion-button router-link="/memories/add">
