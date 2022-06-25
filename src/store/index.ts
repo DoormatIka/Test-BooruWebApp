@@ -10,7 +10,8 @@ const store = createStore({
                 id: "m1",
                 title: "Oh dear...",
                 description: "holy shit...",
-                image: "https://images-ext-2.discordapp.net/external/cb6QoQDw7N2UArDvg2mK9C91yULRs1NgvtcKs-HB0W0/https/miro.medium.com/max/1200/1%2AhABoMlByWXfyopfVptC80A.png?width=1019&height=465"
+                image: "https://images-ext-2.discordapp.net/external/cb6QoQDw7N2UArDvg2mK9C91yULRs1NgvtcKs-HB0W0/https/miro.medium.com/max/1200/1%2AhABoMlByWXfyopfVptC80A.png?width=1019&height=465",
+                thumb: "https://images-ext-2.discordapp.net/external/cb6QoQDw7N2UArDvg2mK9C91yULRs1NgvtcKs-HB0W0/https/miro.medium.com/max/1200/1%2AhABoMlByWXfyopfVptC80A.png?width=1019&height=465"
             }
         ],
     },
@@ -24,20 +25,25 @@ const store = createStore({
             }
         } 
     },
-    /*
+    
     mutations: {
-        memoriesMutate(state, payload) {
-            state.memories = payload;
+        addMemory(state, memoryData) {
+            const newMemory = {
+                id: new Date().toISOString(),
+                title: memoryData.title,
+                image: memoryData.imageUrl,
+                thumb: memoryData.imageUrl,
+                description: memoryData.description
+            };
+            state.memories.unshift(newMemory);
         }
     },
-    actions: { // gets booru stuff :)
-        async memoriesMutate(context) {
-            // const res = await axios.get('https://booruapi.sassinzz13.repl.co/api/booru/gelbooru')
-            // console.log(res.data)
-            // context.commit('memoriesMutate', res.data)
+    actions: {
+        addMemory(context, memoryData) {
+            context.commit('addMemory', memoryData);
         }
     }
-    */
+    
 });
 
 export default store;

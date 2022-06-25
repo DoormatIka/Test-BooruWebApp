@@ -4,9 +4,7 @@
             v-for="memory in memories" 
             :key="memory.id"
             :memory="memory"
-        >
-
-        </memory-list-item>
+        ></memory-list-item>
     </ion-list>
 </template>
 

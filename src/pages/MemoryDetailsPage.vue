@@ -16,8 +16,9 @@
 </template>
 
 <script lang="ts">
-import MemoryOverview from '../components/memories/MemoryOverview.vue'
 import { defineComponent } from 'vue';
+
+import MemoryOverview from '../components/memories/MemoryOverview.vue'
 
 export default defineComponent({
     name: "MemoryDetails",
