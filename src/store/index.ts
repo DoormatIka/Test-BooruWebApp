@@ -1,6 +1,4 @@
 import { createStore } from 'vuex';
-import { search } from 'booru';
-import SearchResults from 'booru/dist/structures/SearchResults';
 import axios from 'axios';
 
 const store = createStore({
