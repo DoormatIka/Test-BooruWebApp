@@ -1,0 +1,7 @@
+{
+  "name": "BooruApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
